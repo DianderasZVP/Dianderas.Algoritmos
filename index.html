@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Carlos Manuel Marcos Dianderas Esteban</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scrip.js" defer></script>
+</head>
+<body>
+
+  <!-- BANNER DE PORTADA CON FOTO Y NOMBRE SUPERPUESTOS -->
+  <header class="cover-banner">
+    <div class="cover-overlay">
+      <div class="profile-hero">
+        <img src="img/myself.jpg" alt="Foto de Perfil" class="avatar">
+        <div class="profile-details">
+          <h1>Dianderas Esteban Carlos Manuel Marcos</h1>
+          <p>Estudiante de Ingeniería de Sistemas y Computación</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- SOBRE MÍ -->
+    <section class="card">
+      <h2>Sobre mí</h2>
+      <p>
+        Bienvenido a mi portafolio académico. En este espacio se recopilan los trabajos, 
+        proyectos y contenidos desarrollados a lo largo de la asignatura.
+      </p>
+    </section>
+
+    <!-- UNIDADES DE APRENDIZAJE -->
+    <section class="card">
+      <h2>Contenido por Unidades</h2>
+
+      <article class="unidad-block">
+        <h3>Unidad 1</h3>
+        <div class="unidad-body">
+          <p>Selecciona una semana para ver sus infografías.</p>
+          <div class="week-selector" role="group" aria-label="Semanas de la Unidad 1">
+            <button class="week-button" type="button" data-week="semana_1" aria-pressed="false">Semana 1</button>
+            <button class="week-button" type="button" data-week="semana_2" aria-pressed="false">Semana 2</button>
+            <button class="week-button" type="button" data-week="semana_3" aria-pressed="false">Semana 3</button>
+          </div>
+          <div class="infografia-grid" id="infografia-grid" aria-live="polite" hidden></div>
+        </div>
+      </article>
+
+      <article class="unidad-block">
+        <h3>Unidad 2</h3>
+        <div class="unidad-body">
+          <p><em>Agrega aquí el contenido, archivos o resúmenes de la segunda unidad.</em></p>
+        </div>
+      </article>
+
+      <article class="unidad-block">
+        <h3>Unidad 3</h3>
+        <div class="unidad-body">
+          <p><em>Agrega aquí el contenido, archivos o resúmenes de la tercera unidad.</em></p>
+        </div>
+      </article>
+
+      <article class="unidad-block">
+        <h3>Unidad 4</h3>
+        <div class="unidad-body">
+          <p><em>Agrega aquí el contenido, archivos o resúmenes de la cuarta unidad.</em></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="card">
+      <h2>Contacto</h2>
+      <div class="contact-data">
+        <p><strong>Teléfono:</strong> <a href="tel:998226307">998226307</a></p>
+        <p><strong>Correo Institucional:</strong> <a href="mailto:u00052c@ms.upla.edu.pe">u00052c@ms.upla.edu.pe</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Carlos Manuel Marcos Dianderas Esteban. Todos los derechos reservados.</p>
+  </footer>
+
+  <dialog class="image-dialog" aria-labelledby="image-dialog-title">
+    <div class="image-dialog-header">
+      <h2 id="image-dialog-title"></h2>
+      <button class="image-dialog-close" type="button" aria-label="Cerrar imagen">&times;</button>
+    </div>
+    <img class="image-dialog-content" alt="">
+  </dialog>
+</body>
+</html>
