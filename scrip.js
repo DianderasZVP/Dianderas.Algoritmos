@@ -29,6 +29,13 @@ const infografiasPorSemana = {
 		'infografias/UNIDAD_1/semana_3/Enunciado 3/2-MostrarAlumnos.png',
 		'infografias/UNIDAD_1/semana_3/Enunciado 3/3-CalcularPromedio.png',
 		'infografias/UNIDAD_1/semana_3/enunciado 4/1-IngresarDatos.png'
+	],
+	semana_4: [
+		'infografias/UNIDAD_1/semana_4/2-Lista Aprovados.jpg',
+		'infografias/UNIDAD_1/semana_4/3-Lista Desaprobados.jpg',
+		'infografias/UNIDAD_1/semana_4/4-Mejor Promedio.jpg',
+		'infografias/UNIDAD_1/semana_4/5-Peor Promedio.jpg',
+		'infografias/UNIDAD_1/semana_4/6-Promedio General.jpg'
 	]
 };
 
