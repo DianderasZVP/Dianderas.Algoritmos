@@ -36,11 +36,42 @@ const infografiasPorSemana = {
 		'infografias/UNIDAD_1/semana_4/4-Mejor Promedio.jpg',
 		'infografias/UNIDAD_1/semana_4/5-Peor Promedio.jpg',
 		'infografias/UNIDAD_1/semana_4/6-Promedio General.jpg'
+	],
+	semana_6: [
+		'infografias/UNIDAD_2/Semana_6/1.1-insertar-pila.jpg',
+		'infografias/UNIDAD_2/Semana_6/1.2-mostrar-pila.jpg',
+		'infografias/UNIDAD_2/Semana_6/1.3-elimina-datos.jpg',
+		'infografias/UNIDAD_2/Semana_6/1.4-elimina-pila.jpg',
+		'infografias/UNIDAD_2/Semana_6/1.5-consultar-cima.jpg',
+		'infografias/UNIDAD_2/Semana_6/1.6-mostrar-estado-capacidad.jpg',
+		'infografias/UNIDAD_2/Semana_6/1.7-buscar-alumno-por-codigo.jpg',
+		'infografias/UNIDAD_2/Semana_6/1.8-verificar-estado-logico.jpg',
+		'infografias/UNIDAD_2/Semana_6/1.9-mostrar-mejor-promedio.jpg',
+		'infografias/UNIDAD_2/Semana_6/2.1Computadora.png',
+		'infografias/UNIDAD_2/Semana_6/2.2_mostrarInventario.png',
+		'infografias/UNIDAD_2/Semana_6/2.3_desapilarComputadora.png',
+		'infografias/UNIDAD_2/Semana_6/2.4_consultarCima.png',
+		'infografias/UNIDAD_2/Semana_6/2.5_limpiarInventario.png'
+	],
+	semana_7: [
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_01_encolarAlumno.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_02_desencolarAlumno.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_03_consultarFrente.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_04_mostrarTodos.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_05_verificarSiEstaVacia.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_06_verificarSiEstaLlena.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_07_mostrarCantidad.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_08_buscarAlumnoPorCodigo.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_09_calcularPromedioGeneralGrupo.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_10_filtrarAlumnosPorRendimientoAcademico.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_11_obtenerAlumnoConMayorYMenorPromedio.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_12_invertirOrdenCola.png',
+		'infografias/UNIDAD_2/Semana_7/s7_infografia_13_eliminarAlumnoPorCodigoEspecifico.png'
 	]
 };
 
-const selectorSemanas = document.querySelector('.week-selector');
-const galeriaInfografias = document.querySelector('#infografia-grid');
+const selectoresSemanas = document.querySelectorAll('.week-selector');
+const galeriasInfografias = document.querySelectorAll('.infografia-grid');
 const visorImagen = document.querySelector('.image-dialog');
 const tituloImagen = document.querySelector('#image-dialog-title');
 const imagenAmpliada = document.querySelector('.image-dialog-content');
@@ -50,7 +81,7 @@ function obtenerNombre(ruta) {
 	return nombreArchivo.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
 }
 
-function mostrarSemana(semana) {
+function mostrarSemana(semana, galeriaInfografias) {
 	galeriaInfografias.replaceChildren();
 	galeriaInfografias.hidden = false;
 
@@ -72,25 +103,30 @@ function mostrarSemana(semana) {
 	});
 }
 
-selectorSemanas.addEventListener('click', (evento) => {
-	const boton = evento.target.closest('[data-week]');
-	if (!boton) return;
+selectoresSemanas.forEach((selectorSemanas) => {
+	selectorSemanas.addEventListener('click', (evento) => {
+		const boton = evento.target.closest('[data-week]');
+		if (!boton) return;
 
-	selectorSemanas.querySelectorAll('[data-week]').forEach((semana) => {
-		semana.setAttribute('aria-pressed', String(semana === boton));
+		selectorSemanas.querySelectorAll('[data-week]').forEach((semana) => {
+			semana.setAttribute('aria-pressed', String(semana === boton));
+		});
+		const galeriaInfografias = selectorSemanas.closest('.unidad-body').querySelector('.infografia-grid');
+		mostrarSemana(boton.dataset.week, galeriaInfografias);
 	});
-	mostrarSemana(boton.dataset.week);
 });
 
-galeriaInfografias.addEventListener('click', (evento) => {
-	const tarjeta = evento.target.closest('.infografia-card');
-	if (!tarjeta) return;
+galeriasInfografias.forEach((galeriaInfografias) => {
+	galeriaInfografias.addEventListener('click', (evento) => {
+		const tarjeta = evento.target.closest('.infografia-card');
+		if (!tarjeta) return;
 
-	const miniatura = tarjeta.querySelector('img');
-	tituloImagen.textContent = tarjeta.querySelector('span').textContent;
-	imagenAmpliada.src = miniatura.src;
-	imagenAmpliada.alt = tarjeta.querySelector('span').textContent;
-	visorImagen.showModal();
+		const miniatura = tarjeta.querySelector('img');
+		tituloImagen.textContent = tarjeta.querySelector('span').textContent;
+		imagenAmpliada.src = miniatura.src;
+		imagenAmpliada.alt = tarjeta.querySelector('span').textContent;
+		visorImagen.showModal();
+	});
 });
 
 document.querySelector('.image-dialog-close').addEventListener('click', () => {
