@@ -87,6 +87,49 @@ const infografiasPorSemana = {
 			]
 		}
 	],
+	semana_5: [
+		{
+			titulo: 'Actividad 1',
+			zip: 'Zips/S05_A01_AplicaAlumno.zip',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_5/1.1 Listar aprobados.jpg',
+				'infografias/UNIDAD_2/Semana_5/1.2 Listar desaprobados.jpg',
+				'infografias/UNIDAD_2/Semana_5/1.3 Mejor promedio.jpg',
+				'infografias/UNIDAD_2/Semana_5/1.4 Peor promedio.jpg',
+				'infografias/UNIDAD_2/Semana_5/1.5 Promedio general.jpg',
+				'infografias/UNIDAD_2/Semana_5/1.6 Ordenar alfabéticamente.jpg'
+			]
+		},
+		{
+			titulo: 'Actividad 2',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_5/2.1 Buscar por nombre.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.2 Listar por carrera.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.3 Ordenar por apellidos.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.4 Ordenar por edad.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.5 Invertir lista.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.6 Obtener primero.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.7 Obtener último.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.8 Eliminar por carrera.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.9 Contar por carrera.jpg',
+				'infografias/UNIDAD_2/Semana_5/2.10 Mostrar rango.jpg'
+			]
+		},
+		{
+			titulo: 'Actividad 3',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_5/3.1 Insertar pila.jpg',
+				'infografias/UNIDAD_2/Semana_5/3.2 Mostrar pila.jpg',
+				'infografias/UNIDAD_2/Semana_5/3.3 Eliminar dato.jpg',
+				'infografias/UNIDAD_2/Semana_5/3.4 Eliminar pila.jpg',
+				'infografias/UNIDAD_2/Semana_5/3.5 Consultar cima.jpg',
+				'infografias/UNIDAD_2/Semana_5/3.6 Estado de capacidad.jpg',
+				'infografias/UNIDAD_2/Semana_5/3.7 Buscar por código.jpg',
+				'infografias/UNIDAD_2/Semana_5/3.8 Estado lógico.jpg',
+				'infografias/UNIDAD_2/Semana_5/3.9 Mejor promedio.jpg'
+			]
+		}
+	],
 	semana_6: [
 		{
 			titulo: 'Actividad 1',
