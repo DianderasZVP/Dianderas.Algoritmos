@@ -4,8 +4,8 @@
   --cover-fallback: #2B1B3D;
   --bg-body: #f4f6f8;
   --card-bg: #ffffff;
-  --text-dark: #282432;
-  --text-muted: #6c757d;
+  --text-dark: #000000;
+  --text-muted: #000000;
   --border-line: #ded7ea;
 }
 
@@ -101,7 +101,7 @@ width: 110px;
 
 h2 {
   font-size: 1.3rem;
-  color: var(--primary-color);
+  color: var(--text-dark);
   margin-bottom: 15px;
   border-bottom: 2px solid var(--support-color);
   padding-bottom: 8px;
@@ -124,7 +124,7 @@ h2 {
 
 .unidad-block summary {
   font-size: 1.1rem;
-  color: var(--primary-color);
+  color: var(--text-dark);
   font-weight: 700;
   cursor: pointer;
 }
@@ -162,7 +162,7 @@ h2 {
 
 .week-button {
   padding: 7px 12px;
-  color: var(--primary-color);
+  color: var(--text-dark);
   background: #ffffff;
   border: 1px solid var(--primary-color);
   border-radius: 4px;
@@ -172,8 +172,8 @@ h2 {
 
 .week-button:hover,
 .week-button[aria-pressed="true"] {
-  color: #ffffff;
-  background: var(--primary-color);
+  color: var(--text-dark);
+  background: var(--support-color);
 }
 
 .week-button:focus-visible,
@@ -220,8 +220,8 @@ h2 {
 .actividad-download {
   display: inline-block;
   padding: 6px 10px;
-  color: #ffffff;
-  background: var(--primary-color);
+  color: var(--text-dark);
+  background: var(--support-color);
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   font-size: 0.9rem;
@@ -236,12 +236,14 @@ h2 {
 
 .actividad-galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  align-items: start;
   gap: 10px;
 }
 
 .infografia-card {
   min-width: 0;
+  align-self: start;
   padding: 8px;
   color: var(--text-dark);
   background: #ffffff;
@@ -258,6 +260,7 @@ h2 {
 .infografia-card img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 3 / 4;
   object-fit: contain;
   background: var(--bg-body);
@@ -327,7 +330,7 @@ h2 {
 .image-dialog-download {
   min-height: 36px;
   padding: 6px 10px;
-  color: var(--primary-color);
+  color: var(--text-dark);
   background: #ffffff;
   border: 1px solid var(--primary-color);
   border-radius: 4px;
@@ -373,7 +376,7 @@ h2 {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--text-dark);
   text-decoration: none;
 }
 
