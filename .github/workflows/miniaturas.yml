@@ -1,0 +1,40 @@
+name: Generar miniaturas de infografías
+
+on:
+  push:
+    paths:
+      - 'infografias/**'
+      - '!infografias/miniaturas/**'
+      - 'herramientas/generar_miniaturas.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar Pillow
+        run: python -m pip install Pillow
+
+      - name: Generar archivos WebP
+        run: python herramientas/generar_miniaturas.py
+
+      - name: Guardar miniaturas generadas
+        run: |
+          if [[ -n "$(git status --porcelain -- infografias/miniaturas)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add infografias/miniaturas
+            git commit -m "chore: generar miniaturas WebP"
+            git push
+          fi

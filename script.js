@@ -181,6 +181,48 @@ const infografiasPorSemana = {
 				'infografias/UNIDAD_2/Semana_7/s7_infografia_13_eliminarAlumnoPorCodigoEspecifico.png'
 			]
 		}
+	],
+	semana_11: [
+		{
+			titulo: 'Actividad 1',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_11/1.1 Insertar al inicio.png',
+				'infografias/UNIDAD_2/Semana_11/1.2 Insertar al final.png',
+				'infografias/UNIDAD_2/Semana_11/1.3 Insertar en posición X.png',
+				'infografias/UNIDAD_2/Semana_11/1.4 Insertar por referencia.png',
+				'infografias/UNIDAD_2/Semana_11/1.5 Eliminar al inicio.png',
+				'infografias/UNIDAD_2/Semana_11/1.6 Eliminar al final.png',
+				'infografias/UNIDAD_2/Semana_11/1.7 Eliminar en posición X.png',
+				'infografias/UNIDAD_2/Semana_11/1.8 Eliminar por referencia.png',
+				'infografias/UNIDAD_2/Semana_11/1.9 Buscar alumno.png',
+				'infografias/UNIDAD_2/Semana_11/1.10 Recorrer lista.png',
+				'infografias/UNIDAD_2/Semana_11/1.11 Ordenar lista.png',
+				'infografias/UNIDAD_2/Semana_11/1.12 Intercambiar elementos.png',
+				'infografias/UNIDAD_2/Semana_11/1.13 Obtener tamaño.png',
+				'infografias/UNIDAD_2/Semana_11/1.14 Modificar alumno.png'
+			]
+		},
+		{
+			titulo: 'Actividad 2',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_11/2.1 Registrar al inicio.png',
+				'infografias/UNIDAD_2/Semana_11/2.2 Registrar al final.png',
+				'infografias/UNIDAD_2/Semana_11/2.3 Insertar en posición X.png',
+				'infografias/UNIDAD_2/Semana_11/2.4 Insertar después de código.png',
+				'infografias/UNIDAD_2/Semana_11/2.5 Atender siguiente paciente.png',
+				'infografias/UNIDAD_2/Semana_11/2.6 Eliminar turno cancelado.png',
+				'infografias/UNIDAD_2/Semana_11/2.7 Eliminar primer turno.png',
+				'infografias/UNIDAD_2/Semana_11/2.8 Eliminar último turno.png',
+				'infografias/UNIDAD_2/Semana_11/2.9 Reprogramar paciente.png',
+				'infografias/UNIDAD_2/Semana_11/2.10 Buscar paciente por código.png',
+				'infografias/UNIDAD_2/Semana_11/2.11 Mostrar pacientes pendientes.png',
+				'infografias/UNIDAD_2/Semana_11/2.12 Consultar cantidad.png',
+				'infografias/UNIDAD_2/Semana_11/2.13 Mostrar próximo paciente.png',
+				'infografias/UNIDAD_2/Semana_11/2.14 Ordenar por número de turno.png',
+				'infografias/UNIDAD_2/Semana_11/2.15 Intercambiar posiciones.png',
+				'infografias/UNIDAD_2/Semana_11/2.16 Modificar datos del paciente.png'
+			]
+		}
 	]
 };
 
@@ -189,17 +231,55 @@ const galeriasInfografias = document.querySelectorAll('.infografia-grid');
 const visorImagen = document.querySelector('.image-dialog');
 const tituloImagen = document.querySelector('#image-dialog-title');
 const imagenAmpliada = document.querySelector('.image-dialog-content');
+const enlaceDescargarImagen = document.querySelector('.image-dialog-download');
+const botonAnterior = document.querySelector('.image-dialog-previous');
+const botonSiguiente = document.querySelector('.image-dialog-next');
+let imagenesVisor = [];
+let indiceImagenActual = 0;
 
 function obtenerNombre(ruta) {
-	const nombreArchivo = ruta.split('/').pop();
-	return nombreArchivo.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+	const nombreArchivo = (typeof ruta === 'string' ? ruta : ruta.src).split('/').pop();
+	const nombreLimpio = nombreArchivo
+		.replace(/\.[^.]+$/, '')
+		.replace(/^s\d+[_\s-]*/i, '')
+		.replace(/^infograf[ií]a[_\s-]*\d+[_\s-]*/i, '')
+		.replace(/^\d+(?:[._-]\d+)*[._\s-]*/, '')
+		.replace(/([a-záéíóúñ])([A-ZÁÉÍÓÚÑ])/g, '$1 $2')
+		.replace(/[-_]+/g, ' ')
+		.replace(/\s+/g, ' ')
+		.trim()
+		.toLocaleLowerCase('es');
+	return nombreLimpio ? nombreLimpio[0].toLocaleUpperCase('es') + nombreLimpio.slice(1) : 'Infografía';
 }
+
+function obtenerMiniatura(ruta) {
+	return ruta.replace(/^infografias\//, 'infografias/miniaturas/').replace(/\.[^.]+$/, '.webp');
+}
+
+function abrirImagen(indice) {
+	indiceImagenActual = (indice + imagenesVisor.length) % imagenesVisor.length;
+	const imagen = imagenesVisor[indiceImagenActual];
+	tituloImagen.textContent = imagen.titulo;
+	imagenAmpliada.src = imagen.src;
+	imagenAmpliada.alt = imagen.titulo;
+	imagenAmpliada.width = imagen.width;
+	imagenAmpliada.height = imagen.height;
+	enlaceDescargarImagen.href = imagen.src;
+	enlaceDescargarImagen.download = imagen.src.split('/').pop();
+	botonAnterior.disabled = imagenesVisor.length < 2;
+	botonSiguiente.disabled = imagenesVisor.length < 2;
+}
+
+imagenAmpliada.addEventListener('load', () => {
+	imagenAmpliada.width = imagenAmpliada.naturalWidth;
+	imagenAmpliada.height = imagenAmpliada.naturalHeight;
+});
 
 function mostrarSemana(semana, galeriaInfografias) {
 	galeriaInfografias.replaceChildren();
 	galeriaInfografias.hidden = false;
 
-	infografiasPorSemana[semana].forEach((actividad) => {
+	(infografiasPorSemana[semana] || []).forEach((actividad) => {
 		const seccionActividad = document.createElement('section');
 		const encabezado = document.createElement('div');
 		const tituloActividad = document.createElement('h4');
@@ -220,8 +300,9 @@ function mostrarSemana(semana, galeriaInfografias) {
 			encabezado.append(enlaceDescarga);
 		}
 
-		actividad.imagenes.forEach((ruta) => {
-			const nombre = obtenerNombre(ruta);
+		actividad.imagenes.forEach((imagenData) => {
+			const ruta = typeof imagenData === 'string' ? imagenData : imagenData.src;
+			const nombre = (typeof imagenData === 'object' && imagenData.titulo) || obtenerNombre(imagenData);
 			const tarjeta = document.createElement('button');
 			const miniatura = document.createElement('img');
 			const titulo = document.createElement('span');
@@ -229,7 +310,16 @@ function mostrarSemana(semana, galeriaInfografias) {
 			tarjeta.className = 'infografia-card';
 			tarjeta.type = 'button';
 			tarjeta.setAttribute('aria-label', `Ampliar ${nombre}`);
-			miniatura.src = ruta;
+			tarjeta.dataset.originalSrc = ruta;
+			miniatura.src = obtenerMiniatura(ruta);
+			miniatura.dataset.originalSrc = ruta;
+			miniatura.width = 400;
+			miniatura.height = 533;
+			miniatura.addEventListener('error', () => {
+				if (miniatura.src !== new URL(ruta, document.baseURI).href) {
+					miniatura.src = ruta;
+				}
+			}, { once: true });
 			miniatura.alt = '';
 			miniatura.loading = 'lazy';
 			titulo.textContent = nombre;
@@ -241,6 +331,34 @@ function mostrarSemana(semana, galeriaInfografias) {
 		galeriaInfografias.append(seccionActividad);
 	});
 }
+
+document.querySelectorAll('.unidad-block').forEach((unidad) => {
+	unidad.addEventListener('toggle', () => {
+		if (unidad.open) {
+			document.querySelectorAll('.unidad-block[open]').forEach((otraUnidad) => {
+				if (otraUnidad !== unidad) otraUnidad.open = false;
+			});
+		}
+	});
+});
+
+selectoresSemanas.forEach((selectorSemanas) => {
+	const unidadNumero = Number(selectorSemanas.closest('.unidad-block').dataset.unit);
+	Object.keys(infografiasPorSemana).forEach((semana) => {
+		const numeroSemana = Number(semana.match(/\d+/)[0]);
+		const unidadSemana = numeroSemana <= 4 ? 1 : 2;
+		if (unidadSemana !== unidadNumero) return;
+
+		const boton = document.createElement('button');
+		boton.className = 'week-button';
+		boton.type = 'button';
+		boton.id = `semana-${numeroSemana}`;
+		boton.dataset.week = semana;
+		boton.setAttribute('aria-pressed', 'false');
+		boton.textContent = `Semana ${numeroSemana}`;
+		selectorSemanas.append(boton);
+	});
+});
 
 selectoresSemanas.forEach((selectorSemanas) => {
 	selectorSemanas.addEventListener('click', (evento) => {
@@ -260,10 +378,13 @@ galeriasInfografias.forEach((galeriaInfografias) => {
 		const tarjeta = evento.target.closest('.infografia-card');
 		if (!tarjeta) return;
 
-		const miniatura = tarjeta.querySelector('img');
-		tituloImagen.textContent = tarjeta.querySelector('span').textContent;
-		imagenAmpliada.src = miniatura.src;
-		imagenAmpliada.alt = tarjeta.querySelector('span').textContent;
+		imagenesVisor = Array.from(galeriaInfografias.querySelectorAll('.infografia-card')).map((elemento) => ({
+			src: elemento.dataset.originalSrc,
+			titulo: elemento.querySelector('span').textContent,
+			width: elemento.querySelector('img').naturalWidth || 400,
+			height: elemento.querySelector('img').naturalHeight || 533
+		}));
+		abrirImagen(imagenesVisor.findIndex((imagen) => imagen.src === tarjeta.dataset.originalSrc));
 		visorImagen.showModal();
 	});
 });
@@ -271,6 +392,33 @@ galeriasInfografias.forEach((galeriaInfografias) => {
 document.querySelector('.image-dialog-close').addEventListener('click', () => {
 	visorImagen.close();
 });
+
+botonAnterior.addEventListener('click', () => abrirImagen(indiceImagenActual - 1));
+botonSiguiente.addEventListener('click', () => abrirImagen(indiceImagenActual + 1));
+
+document.addEventListener('keydown', (evento) => {
+	if (!visorImagen.open) return;
+	if (evento.key === 'Escape') {
+		visorImagen.close();
+	} else if (evento.key === 'ArrowLeft') {
+		evento.preventDefault();
+		abrirImagen(indiceImagenActual - 1);
+	} else if (evento.key === 'ArrowRight') {
+		evento.preventDefault();
+		abrirImagen(indiceImagenActual + 1);
+	}
+});
+
+function abrirSemanaDesdeHash() {
+	const boton = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+	if (!boton || !boton.matches('[data-week]')) return;
+	const unidad = boton.closest('.unidad-block');
+	unidad.open = true;
+	boton.click();
+}
+
+window.addEventListener('hashchange', abrirSemanaDesdeHash);
+abrirSemanaDesdeHash();
 
 visorImagen.addEventListener('click', (evento) => {
 	if (evento.target === visorImagen) visorImagen.close();
