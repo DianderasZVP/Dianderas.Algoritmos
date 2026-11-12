@@ -181,6 +181,48 @@ const infografiasPorSemana = {
 				'infografias/UNIDAD_2/Semana_7/s7_infografia_13_eliminarAlumnoPorCodigoEspecifico.png'
 			]
 		}
+	],
+	semana_11: [
+		{
+			titulo: 'Actividad 1',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_11/1.1 Insertar al inicio.png',
+				'infografias/UNIDAD_2/Semana_11/1.2 Insertar al final.png',
+				'infografias/UNIDAD_2/Semana_11/1.3 Insertar en posición X.png',
+				'infografias/UNIDAD_2/Semana_11/1.4 Insertar por referencia.png',
+				'infografias/UNIDAD_2/Semana_11/1.5 Eliminar al inicio.png',
+				'infografias/UNIDAD_2/Semana_11/1.6 Eliminar al final.png',
+				'infografias/UNIDAD_2/Semana_11/1.7 Eliminar en posición X.png',
+				'infografias/UNIDAD_2/Semana_11/1.8 Eliminar por referencia.png',
+				'infografias/UNIDAD_2/Semana_11/1.9 Buscar alumno.png',
+				'infografias/UNIDAD_2/Semana_11/1.10 Recorrer lista.png',
+				'infografias/UNIDAD_2/Semana_11/1.11 Ordenar lista.png',
+				'infografias/UNIDAD_2/Semana_11/1.12 Intercambiar elementos.png',
+				'infografias/UNIDAD_2/Semana_11/1.13 Obtener tamaño.png',
+				'infografias/UNIDAD_2/Semana_11/1.14 Modificar alumno.png'
+			]
+		},
+		{
+			titulo: 'Actividad 2',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_11/2.1 Registrar al inicio.png',
+				'infografias/UNIDAD_2/Semana_11/2.2 Registrar al final.png',
+				'infografias/UNIDAD_2/Semana_11/2.3 Insertar en posición X.png',
+				'infografias/UNIDAD_2/Semana_11/2.4 Insertar después de código.png',
+				'infografias/UNIDAD_2/Semana_11/2.5 Atender siguiente paciente.png',
+				'infografias/UNIDAD_2/Semana_11/2.6 Eliminar turno cancelado.png',
+				'infografias/UNIDAD_2/Semana_11/2.7 Eliminar primer turno.png',
+				'infografias/UNIDAD_2/Semana_11/2.8 Eliminar último turno.png',
+				'infografias/UNIDAD_2/Semana_11/2.9 Reprogramar paciente.png',
+				'infografias/UNIDAD_2/Semana_11/2.10 Buscar paciente por código.png',
+				'infografias/UNIDAD_2/Semana_11/2.11 Mostrar pacientes pendientes.png',
+				'infografias/UNIDAD_2/Semana_11/2.12 Consultar cantidad.png',
+				'infografias/UNIDAD_2/Semana_11/2.13 Mostrar próximo paciente.png',
+				'infografias/UNIDAD_2/Semana_11/2.14 Ordenar por número de turno.png',
+				'infografias/UNIDAD_2/Semana_11/2.15 Intercambiar posiciones.png',
+				'infografias/UNIDAD_2/Semana_11/2.16 Modificar datos del paciente.png'
+			]
+		}
 	]
 };
 
