@@ -1,10 +1,12 @@
 :root {
-  --primary-color: #000000;
+  --primary-color: #6C4AB6;
+  --support-color: #C6E03B;
+  --cover-fallback: #2B1B3D;
   --bg-body: #f4f6f8;
   --card-bg: #ffffff;
-  --text-dark: #1a1a1a;
+  --text-dark: #282432;
   --text-muted: #6c757d;
-  --border-line: #e0e0e0;
+  --border-line: #ded7ea;
 }
 
 * {
@@ -32,6 +34,7 @@ body {
 .cover-banner {
   width: 100%;
   height: 280px;
+  background-color: var(--cover-fallback);
   /* CAMBIA ESTA URL POR LA RUTA DE TU IMAGEN (ej. url('imagenes/portada.jpg')) */
   background-image: url('img/portada.jpg');
   background-size: cover;
@@ -100,7 +103,7 @@ h2 {
   font-size: 1.3rem;
   color: var(--primary-color);
   margin-bottom: 15px;
-  border-bottom: 2px solid var(--bg-body);
+  border-bottom: 2px solid var(--support-color);
   padding-bottom: 8px;
 }
 
@@ -119,22 +122,30 @@ h2 {
   padding-bottom: 0;
 }
 
-.unidad-block h3 {
+.unidad-block summary {
   font-size: 1.1rem;
-  color: #111111;
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  color: var(--primary-color);
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.unidad-block h3::before {
+.unidad-block summary::marker {
+  color: var(--primary-color);
+}
+
+.unidad-block summary::before {
   content: "";
   display: inline-block;
   width: 4px;
   height: 16px;
-  background-color: var(--primary-color);
+  margin-right: 8px;
+  background-color: var(--support-color);
   border-radius: 2px;
+  vertical-align: -2px;
+}
+
+.unidad-block[open] > summary {
+  margin-bottom: 6px;
 }
 
 .unidad-body {
@@ -166,10 +177,13 @@ h2 {
 }
 
 .week-button:focus-visible,
+.image-dialog-actions a:focus-visible,
+.image-dialog-actions button:focus-visible,
+.unidad-block summary:focus-visible,
 .infografia-card:focus-visible,
 .image-dialog-close:focus-visible,
 .actividad-download:focus-visible {
-  outline: 2px solid var(--text-dark);
+  outline: 3px solid var(--support-color);
   outline-offset: 2px;
 }
 
@@ -215,15 +229,15 @@ h2 {
 }
 
 .actividad-download:hover {
-  color: var(--primary-color);
-  background: #ffffff;
+  color: var(--text-dark);
+  background: var(--support-color);
   text-decoration: none;
 }
 
 .actividad-galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), 1fr));
+  gap: 10px;
 }
 
 .infografia-card {
@@ -244,7 +258,7 @@ h2 {
 .infografia-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   object-fit: contain;
   background: var(--bg-body);
 }
@@ -256,16 +270,24 @@ h2 {
   overflow-wrap: anywhere;
 }
 
+.coming-soon {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 .image-dialog {
-  width: min(900px, calc(100% - 32px));
+  width: 100vw;
   max-width: none;
-  max-height: calc(100% - 32px);
-  margin: auto;
-  padding: 16px;
+  height: 100vh;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
   color: var(--text-dark);
   background: #ffffff;
-  border: 1px solid var(--border-line);
-  border-radius: 8px;
+  border: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .image-dialog::backdrop {
@@ -273,37 +295,74 @@ h2 {
 }
 
 .image-dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 12px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-line);
 }
 
 .image-dialog-header h2 {
+  min-width: 0;
   margin: 0;
   overflow-wrap: anywhere;
+  border: 0;
+  padding: 0;
+}
+
+.image-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.image-dialog-actions button,
+.image-dialog-download {
+  min-height: 36px;
+  padding: 6px 10px;
+  color: var(--primary-color);
+  background: #ffffff;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.image-dialog-actions button:hover,
+.image-dialog-download:hover {
+  color: var(--text-dark);
+  background: var(--support-color);
+  text-decoration: none;
+}
+
+.image-dialog-actions button:disabled {
+  color: var(--text-muted);
+  border-color: var(--border-line);
+  cursor: not-allowed;
 }
 
 .image-dialog-close {
   flex: 0 0 auto;
   width: 36px;
   height: 36px;
-  color: var(--text-dark);
-  background: #ffffff;
-  border: 1px solid var(--border-line);
-  border-radius: 4px;
   font-size: 1.4rem;
   line-height: 1;
-  cursor: pointer;
 }
 
 .image-dialog-content {
   display: block;
-  max-width: 100%;
-  max-height: calc(100vh - 110px);
-  margin: 0 auto;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0;
 }
 
 /* ==========================================
@@ -348,5 +407,23 @@ footer {
 
   .profile-details h1 {
     font-size: 1.3rem;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .actividad-card {
+    padding: 10px;
+  }
+
+  .image-dialog-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .image-dialog-actions {
+    width: 100%;
+    justify-content: flex-start;
   }
 }

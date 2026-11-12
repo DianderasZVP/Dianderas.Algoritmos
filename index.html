@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio | Carlos Manuel Marcos Dianderas Esteban</title>
+  <meta name="description" content="Portafolio académico de la asignatura Algoritmos, con infografías y proyectos desarrollados durante el curso.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portafolio académico | Algoritmos">
+  <meta property="og:description" content="Infografías y proyectos académicos de la asignatura Algoritmos.">
+  <meta property="og:image" content="img/portada.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
-  <script src="scrip.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -13,7 +19,7 @@
   <header class="cover-banner">
     <div class="cover-overlay">
       <div class="profile-hero">
-        <img src="img/Myselft2.jpeg" alt="Foto de Perfil" class="avatar">
+        <img src="img/Myselft2.jpeg" alt="Foto de Perfil" class="avatar" width="110" height="110">
         <div class="profile-details">
           <h1>Dianderas Esteban Carlos Manuel Marcos</h1>
           <p>Estudiante de Ingeniería de Sistemas y Computación</p>
@@ -36,46 +42,39 @@
     <section class="card">
       <h2>Contenido por Unidades</h2>
 
-      <article class="unidad-block">
-        <h3>Unidad 1</h3>
+      <details class="unidad-block" data-unit="1">
+        <summary>Unidad 1</summary>
         <div class="unidad-body">
           <p>Selecciona una semana para ver sus infografías.</p>
           <div class="week-selector" role="group" aria-label="Semanas de la Unidad 1">
-            <button class="week-button" type="button" data-week="semana_1" aria-pressed="false">Semana 1</button>
-            <button class="week-button" type="button" data-week="semana_2" aria-pressed="false">Semana 2</button>
-            <button class="week-button" type="button" data-week="semana_3" aria-pressed="false">Semana 3</button>
-            <button class="week-button" type="button" data-week="semana_4" aria-pressed="false">Semana 4</button>
           </div>
           <div class="infografia-grid" id="infografia-grid" aria-live="polite" hidden></div>
         </div>
-      </article>
+      </details>
 
-      <article class="unidad-block">
-        <h3>Unidad 2</h3>
+      <details class="unidad-block" data-unit="2">
+        <summary>Unidad 2</summary>
         <div class="unidad-body">
           <p>Selecciona una semana para ver sus infografías.</p>
           <div class="week-selector" role="group" aria-label="Semanas de la Unidad 2">
-            <button class="week-button" type="button" data-week="semana_5" aria-pressed="false">Semana 5</button>
-            <button class="week-button" type="button" data-week="semana_6" aria-pressed="false">Semana 6</button>
-            <button class="week-button" type="button" data-week="semana_7" aria-pressed="false">Semana 7</button>
           </div>
           <div class="infografia-grid" aria-live="polite" hidden></div>
         </div>
-      </article>
+      </details>
 
-      <article class="unidad-block">
-        <h3>Unidad 3</h3>
+      <details class="unidad-block" data-unit="3">
+        <summary>Unidad 3</summary>
         <div class="unidad-body">
-          <p><em>Agrega aquí el contenido, archivos o resúmenes de la tercera unidad.</em></p>
+          <p class="coming-soon">Próximamente</p>
         </div>
-      </article>
+      </details>
 
-      <article class="unidad-block">
-        <h3>Unidad 4</h3>
+      <details class="unidad-block" data-unit="4">
+        <summary>Unidad 4</summary>
         <div class="unidad-body">
-          <p><em>Agrega aquí el contenido, archivos o resúmenes de la cuarta unidad.</em></p>
+          <p class="coming-soon">Próximamente</p>
         </div>
-      </article>
+      </details>
     </section>
 
     <!-- CONTACTO -->
@@ -95,9 +94,14 @@
   <dialog class="image-dialog" aria-labelledby="image-dialog-title">
     <div class="image-dialog-header">
       <h2 id="image-dialog-title"></h2>
-      <button class="image-dialog-close" type="button" aria-label="Cerrar imagen">&times;</button>
+      <div class="image-dialog-actions">
+        <button class="image-dialog-previous" type="button" aria-label="Imagen anterior">Anterior</button>
+        <button class="image-dialog-next" type="button" aria-label="Imagen siguiente">Siguiente</button>
+        <a class="image-dialog-download" href="" download>Descargar imagen</a>
+        <button class="image-dialog-close" type="button" aria-label="Cerrar imagen">&times;</button>
+      </div>
     </div>
-    <img class="image-dialog-content" alt="">
+    <img class="image-dialog-content" alt="" width="400" height="533">
   </dialog>
   <script type="text/javascript">
     (function(d, t) {
