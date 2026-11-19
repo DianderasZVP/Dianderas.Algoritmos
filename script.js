@@ -223,6 +223,44 @@ const infografiasPorSemana = {
 				'infografias/UNIDAD_2/Semana_11/2.16 Modificar datos del paciente.png'
 			]
 		}
+	],
+	semana_12: [
+		{
+			titulo: 'Actividad 1',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_12/1.1 Registrar al inicio.png',
+				'infografias/UNIDAD_2/Semana_12/1.2 Registrar al final.png',
+				'infografias/UNIDAD_2/Semana_12/1.3 Registrar en una posición.png',
+				'infografias/UNIDAD_2/Semana_12/1.4 Registrar después de otro alumno.png',
+				'infografias/UNIDAD_2/Semana_12/1.5 Mostrar todos los alumnos.png',
+				'infografias/UNIDAD_2/Semana_12/1.6 Mostrar en orden inverso.png',
+				'infografias/UNIDAD_2/Semana_12/1.7 Buscar por código.png',
+				'infografias/UNIDAD_2/Semana_12/1.8 Buscar por posición.png',
+				'infografias/UNIDAD_2/Semana_12/1.9 Eliminar al inicio.png',
+				'infografias/UNIDAD_2/Semana_12/1.10 Eliminar al final.png',
+				'infografias/UNIDAD_2/Semana_12/1.11 Eliminar por posición.png',
+				'infografias/UNIDAD_2/Semana_12/1.12 Eliminar por código.png',
+				'infografias/UNIDAD_2/Semana_12/1.13 Ordenar por promedio.png',
+				'infografias/UNIDAD_2/Semana_12/1.14 Intercambiar alumnos.png',
+				'infografias/UNIDAD_2/Semana_12/1.15 Modificar información.png',
+				'infografias/UNIDAD_2/Semana_12/1.16 Consultar la cantidad.png'
+			]
+		},
+		{
+			titulo: 'Actividad 2',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_12/2.1 Registrar cita al inicio o al final.png',
+				'infografias/UNIDAD_2/Semana_12/2.2 Insertar cita en una posición.png',
+				'infografias/UNIDAD_2/Semana_12/2.3 Buscar cita por código o DNI.png',
+				'infografias/UNIDAD_2/Semana_12/2.4 Modificar información de una cita.png',
+				'infografias/UNIDAD_2/Semana_12/2.5 Cancelar o eliminar una cita.png',
+				'infografias/UNIDAD_2/Semana_12/2.6 Mostrar citas de la primera a la última.png',
+				'infografias/UNIDAD_2/Semana_12/2.7 Mostrar citas en orden inverso.png',
+				'infografias/UNIDAD_2/Semana_12/2.8 Ordenar citas por fecha y hora.png',
+				'infografias/UNIDAD_2/Semana_12/2.9 Buscar citas de un médico.png',
+				'infografias/UNIDAD_2/Semana_12/2.10 Contabilizar las citas.png'
+			]
+		}
 	]
 };
 
