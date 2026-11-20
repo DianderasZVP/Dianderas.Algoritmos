@@ -3,18 +3,18 @@ const infografiasPorSemana = {
 		{
 			titulo: 'Actividad 1',
 			imagenes: [
-				'infografias/UNIDAD_1/semana_1/1-Metodo Eliminar(x).png',
-				'infografias/UNIDAD_1/semana_1/2-Metodo Modificar.jpg',
-				'infografias/UNIDAD_1/semana_1/3-Metodo insertar.png'
+				'infografias/UNIDAD_1/Semana_1/1-Metodo Eliminar(x).png',
+				'infografias/UNIDAD_1/Semana_1/2-Metodo Modificar.jpg',
+				'infografias/UNIDAD_1/Semana_1/3-Metodo insertar.png'
 			]
 		},
 		{
 			titulo: 'Actividad 2',
 			imagenes: [
-				'infografias/UNIDAD_1/semana_1/4-Metodo Suma.png',
-				'infografias/UNIDAD_1/semana_1/5-Recorrer Menor a Mayor.png',
-				'infografias/UNIDAD_1/semana_1/6-Suma de impares.jpg',
-				'infografias/UNIDAD_1/semana_1/7_Primer Elemento al Final.png'
+				'infografias/UNIDAD_1/Semana_1/4-Metodo Suma.png',
+				'infografias/UNIDAD_1/Semana_1/5-Recorrer Menor a Mayor.png',
+				'infografias/UNIDAD_1/Semana_1/6-Suma de impares.jpg',
+				'infografias/UNIDAD_1/Semana_1/7_Primer Elemento al Final.png'
 			]
 		}
 	],
@@ -43,47 +43,47 @@ const infografiasPorSemana = {
 	semana_3: [
 		{
 			titulo: 'Actividad 1 — Enunciado 1',
-			imagenes: ['infografias/UNIDAD_1/semana_3/Enunciado 1/SLN_1.png']
+			imagenes: ['infografias/UNIDAD_1/Semana_3/Enunciado 1/SLN_1.png']
 		},
 		{
 			titulo: 'Actividad 2 — Enunciado 2',
 			imagenes: [
-				'infografias/UNIDAD_1/semana_3/Enunciado 2/1-IngresarEmpleados.png',
-				'infografias/UNIDAD_1/semana_3/Enunciado 2/2-MostrarEmpleados.png',
-				'infografias/UNIDAD_1/semana_3/Enunciado 2/3-CalcularSueldo.png'
+				'infografias/UNIDAD_1/Semana_3/Enunciado 2/1-IngresarEmpleados.png',
+				'infografias/UNIDAD_1/Semana_3/Enunciado 2/2-MostrarEmpleados.png',
+				'infografias/UNIDAD_1/Semana_3/Enunciado 2/3-CalcularSueldo.png'
 			]
 		},
 		{
 			titulo: 'Actividad 3 — Enunciado 3',
 			imagenes: [
-				'infografias/UNIDAD_1/semana_3/Enunciado 3/1-IngresarAlumnos.png',
-				'infografias/UNIDAD_1/semana_3/Enunciado 3/2-MostrarAlumnos.png',
-				'infografias/UNIDAD_1/semana_3/Enunciado 3/3-CalcularPromedio.png'
+				'infografias/UNIDAD_1/Semana_3/Enunciado 3/1-IngresarAlumnos.png',
+				'infografias/UNIDAD_1/Semana_3/Enunciado 3/2-MostrarAlumnos.png',
+				'infografias/UNIDAD_1/Semana_3/Enunciado 3/3-CalcularPromedio.png'
 			]
 		},
 		{
 			titulo: 'Actividad 4 — Enunciado 4',
-			imagenes: ['infografias/UNIDAD_1/semana_3/enunciado 4/1-IngresarDatos.png']
+			imagenes: ['infografias/UNIDAD_1/Semana_3/Enunciado 4/1-IngresarDatos.png']
 		}
 	],
 	semana_4: [
 		{
 			titulo: 'Actividad 1',
 			imagenes: [
-				'infografias/UNIDAD_1/semana_4/2-Lista Aprovados.jpg',
-				'infografias/UNIDAD_1/semana_4/3-Lista Desaprobados.jpg',
-				'infografias/UNIDAD_1/semana_4/4-Mejor Promedio.jpg',
-				'infografias/UNIDAD_1/semana_4/5-Peor Promedio.jpg',
-				'infografias/UNIDAD_1/semana_4/6-Promedio General.jpg'
+				'infografias/UNIDAD_1/Semana_4/2-Lista Aprovados.jpg',
+				'infografias/UNIDAD_1/Semana_4/3-Lista Desaprobados.jpg',
+				'infografias/UNIDAD_1/Semana_4/4-Mejor Promedio.jpg',
+				'infografias/UNIDAD_1/Semana_4/5-Peor Promedio.jpg',
+				'infografias/UNIDAD_1/Semana_4/6-Promedio General.jpg'
 			]
 		},
 		{
 			titulo: 'Actividad 2',
 			imagenes: [
-				'infografias/UNIDAD_1/semana_4/7-Ordenar Alfabeticamente.jpg',
-				'infografias/UNIDAD_1/semana_4/8_OrdenarMerito.png',
-				'infografias/UNIDAD_1/semana_4/9_PorcentajeAprobacion.png',
-				'infografias/UNIDAD_1/semana_4/10_BuscarNombre.png'
+				'infografias/UNIDAD_1/Semana_4/7-Ordenar Alfabeticamente.jpg',
+				'infografias/UNIDAD_1/Semana_4/8_OrdenarMerito.png',
+				'infografias/UNIDAD_1/Semana_4/9_PorcentajeAprobacion.png',
+				'infografias/UNIDAD_1/Semana_4/10_BuscarNombre.png'
 			]
 		}
 	],
@@ -179,6 +179,88 @@ const infografiasPorSemana = {
 				'infografias/UNIDAD_2/Semana_7/s7_infografia_11_obtenerAlumnoConMayorYMenorPromedio.png',
 				'infografias/UNIDAD_2/Semana_7/s7_infografia_12_invertirOrdenCola.png',
 				'infografias/UNIDAD_2/Semana_7/s7_infografia_13_eliminarAlumnoPorCodigoEspecifico.png'
+			]
+		}
+	],
+	semana_8: [
+		{
+			titulo: 'Actividad 1',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_8/1.1 Seleccionar directorio raíz.png',
+				'infografias/UNIDAD_2/Semana_8/1.2 Listar archivos por carpeta.png',
+				'infografias/UNIDAD_2/Semana_8/1.3 Contabilizar archivos.png',
+				'infografias/UNIDAD_2/Semana_8/1.4 Calcular tamaño total.png',
+				'infografias/UNIDAD_2/Semana_8/1.5 Buscar por nombre o extensión.png',
+				'infografias/UNIDAD_2/Semana_8/1.6 Reporte de archivos por tipo.png',
+				'infografias/UNIDAD_2/Semana_8/1.7 Mostrar estructura de directorios.png'
+			]
+		},
+		{
+			titulo: 'Actividad 2',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_8/2.1 Registrar productos.png',
+				'infografias/UNIDAD_2/Semana_8/2.2 Mostrar productos.png',
+				'infografias/UNIDAD_2/Semana_8/2.3 Búsqueda binaria recursiva.png',
+				'infografias/UNIDAD_2/Semana_8/2.4 Valor total del inventario.png',
+				'infografias/UNIDAD_2/Semana_8/2.5 Total de unidades disponibles.png',
+				'infografias/UNIDAD_2/Semana_8/2.6 Productos sin existencias.png',
+				'infografias/UNIDAD_2/Semana_8/2.7 Reporte de bajo inventario.png'
+			]
+		},
+		{
+			titulo: 'Actividad 3',
+			imagenes: [
+				'infografias/UNIDAD_2/Semana_8/3.1 Registrar expedientes.png',
+				'infografias/UNIDAD_2/Semana_8/3.2 Insertar en el árbol.png',
+				'infografias/UNIDAD_2/Semana_8/3.3 Buscar por código.png',
+				'infografias/UNIDAD_2/Semana_8/3.4 Mostrar en orden ascendente.png',
+				'infografias/UNIDAD_2/Semana_8/3.5 Contar expedientes.png',
+				'infografias/UNIDAD_2/Semana_8/3.6 Altura del árbol.png'
+			]
+		}
+	],
+	semana_9: [
+		{
+			titulo: 'Actividad 1',
+			imagenes: [
+				'infografias/UNIDAD_3/Semana_9/1.1 Registrar tarea.png',
+				'infografias/UNIDAD_3/Semana_9/1.2 Registrar dependencia.png',
+				'infografias/UNIDAD_3/Semana_9/1.3 Dependencias directas.png',
+				'infografias/UNIDAD_3/Semana_9/1.4 Dependencias indirectas.png',
+				'infografias/UNIDAD_3/Semana_9/1.5 Profundidad maxima.png',
+				'infografias/UNIDAD_3/Semana_9/1.6 Detectar ciclos.png',
+				'infografias/UNIDAD_3/Semana_9/1.7 Tareas bloqueadas.png',
+				'infografias/UNIDAD_3/Semana_9/1.8 Reporte de tareas.png'
+			]
+		},
+		{
+			titulo: 'Actividad 2',
+			imagenes: [
+				'infografias/UNIDAD_3/Semana_9/2.1 Ingresar expresion.png',
+				'infografias/UNIDAD_3/Semana_9/2.2 Reconocer numeros y operadores.png',
+				'infografias/UNIDAD_3/Semana_9/2.3 Parentesis anidados.png',
+				'infografias/UNIDAD_3/Semana_9/2.4 Precedencia de operadores.png',
+				'infografias/UNIDAD_3/Semana_9/2.5 Calcular resultado.png',
+				'infografias/UNIDAD_3/Semana_9/2.6 Detectar errores de sintaxis.png',
+				'infografias/UNIDAD_3/Semana_9/2.7 Division por cero.png',
+				'infografias/UNIDAD_3/Semana_9/2.8 Mostrar expresion y resultado.png',
+				'infografias/UNIDAD_3/Semana_9/2.9 Varias evaluaciones.png',
+				'infografias/UNIDAD_3/Semana_9/2.10 Validar expresion.png'
+			]
+		},
+		{
+			titulo: 'Actividad 3',
+			imagenes: [
+				'infografias/UNIDAD_3/Semana_9/3.1 Registrar producto.png',
+				'infografias/UNIDAD_3/Semana_9/3.2 Registrar costo unitario.png',
+				'infografias/UNIDAD_3/Semana_9/3.3 Definir composicion.png',
+				'infografias/UNIDAD_3/Semana_9/3.4 Registrar cantidad.png',
+				'infografias/UNIDAD_3/Semana_9/3.5 Costo total recursivo.png',
+				'infografias/UNIDAD_3/Semana_9/3.6 Desglose por niveles.png',
+				'infografias/UNIDAD_3/Semana_9/3.7 Componentes compartidos.png',
+				'infografias/UNIDAD_3/Semana_9/3.8 Detectar ciclos.png',
+				'infografias/UNIDAD_3/Semana_9/3.9 Validar no negativos.png',
+				'infografias/UNIDAD_3/Semana_9/3.10 Reporte de costos.png'
 			]
 		}
 	],
@@ -384,7 +466,7 @@ selectoresSemanas.forEach((selectorSemanas) => {
 	const unidadNumero = Number(selectorSemanas.closest('.unidad-block').dataset.unit);
 	Object.keys(infografiasPorSemana).forEach((semana) => {
 		const numeroSemana = Number(semana.match(/\d+/)[0]);
-		const unidadSemana = numeroSemana <= 4 ? 1 : 2;
+		const unidadSemana = numeroSemana <= 4 ? 1 : numeroSemana <= 8 ? 2 : numeroSemana === 9 ? 3 : 2;
 		if (unidadSemana !== unidadNumero) return;
 
 		const boton = document.createElement('button');
