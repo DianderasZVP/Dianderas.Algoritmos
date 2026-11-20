@@ -264,45 +264,68 @@ const infografiasPorSemana = {
 			]
 		}
 	],
+	semana_10: [
+		{
+			titulo: 'Actividad 1',
+			imagenes: [
+				'infografias/UNIDAD_3/Semana_10/1.1 Insertar al inicio.png',
+				'infografias/UNIDAD_3/Semana_10/1.2 Insertar al final.png',
+				'infografias/UNIDAD_3/Semana_10/1.3 Insertar en posición X.png',
+				'infografias/UNIDAD_3/Semana_10/1.4 Insertar por referencia.png',
+				'infografias/UNIDAD_3/Semana_10/1.5 Eliminar al inicio.png',
+				'infografias/UNIDAD_3/Semana_10/1.6 Eliminar al final.png',
+				'infografias/UNIDAD_3/Semana_10/1.7 Eliminar en posición X.png',
+				'infografias/UNIDAD_3/Semana_10/1.8 Eliminar por referencia.png',
+				'infografias/UNIDAD_3/Semana_10/1.9 Buscar por código.png',
+				'infografias/UNIDAD_3/Semana_10/1.10 Mostrar todos los alumnos.png',
+				'infografias/UNIDAD_3/Semana_10/1.11 Ordenar por código.png',
+				'infografias/UNIDAD_3/Semana_10/1.12 Ordenar por promedio.png',
+				'infografias/UNIDAD_3/Semana_10/1.13 Intercambiar dos alumnos.png',
+				'infografias/UNIDAD_3/Semana_10/1.14 Mostrar cantidad de alumnos.png',
+				'infografias/UNIDAD_3/Semana_10/1.15 Modificar datos de un alumno.png',
+				'infografias/UNIDAD_3/Semana_10/1.16 Verificar si la lista está vacía.png'
+			]
+		}
+	],
 	semana_11: [
 		{
 			titulo: 'Actividad 1',
 			imagenes: [
-				'infografias/UNIDAD_2/Semana_11/1.1 Insertar al inicio.png',
-				'infografias/UNIDAD_2/Semana_11/1.2 Insertar al final.png',
-				'infografias/UNIDAD_2/Semana_11/1.3 Insertar en posición X.png',
-				'infografias/UNIDAD_2/Semana_11/1.4 Insertar por referencia.png',
-				'infografias/UNIDAD_2/Semana_11/1.5 Eliminar al inicio.png',
-				'infografias/UNIDAD_2/Semana_11/1.6 Eliminar al final.png',
-				'infografias/UNIDAD_2/Semana_11/1.7 Eliminar en posición X.png',
-				'infografias/UNIDAD_2/Semana_11/1.8 Eliminar por referencia.png',
-				'infografias/UNIDAD_2/Semana_11/1.9 Buscar alumno.png',
-				'infografias/UNIDAD_2/Semana_11/1.10 Recorrer lista.png',
-				'infografias/UNIDAD_2/Semana_11/1.11 Ordenar lista.png',
-				'infografias/UNIDAD_2/Semana_11/1.12 Intercambiar elementos.png',
-				'infografias/UNIDAD_2/Semana_11/1.13 Obtener tamaño.png',
-				'infografias/UNIDAD_2/Semana_11/1.14 Modificar alumno.png'
+				'infografias/UNIDAD_3/Semana_11/1.1 Insertar al inicio.png',
+				'infografias/UNIDAD_3/Semana_11/1.2 Insertar al final.png',
+				'infografias/UNIDAD_3/Semana_11/1.3 Insertar en posición X.png',
+				'infografias/UNIDAD_3/Semana_11/1.4 Insertar por referencia.png',
+				'infografias/UNIDAD_3/Semana_11/1.5 Eliminar al inicio.png',
+				'infografias/UNIDAD_3/Semana_11/1.6 Eliminar al final.png',
+				'infografias/UNIDAD_3/Semana_11/1.7 Eliminar en posición X.png',
+				'infografias/UNIDAD_3/Semana_11/1.8 Eliminar por referencia.png',
+				'infografias/UNIDAD_3/Semana_11/1.9 Buscar alumno.png',
+				'infografias/UNIDAD_3/Semana_11/1.10 Recorrer lista.png',
+				'infografias/UNIDAD_3/Semana_11/1.11 Ordenar lista.png',
+				'infografias/UNIDAD_3/Semana_11/1.12 Intercambiar elementos.png',
+				'infografias/UNIDAD_3/Semana_11/1.13 Obtener tamaño.png',
+				'infografias/UNIDAD_3/Semana_11/1.14 Modificar alumno.png'
 			]
 		},
 		{
 			titulo: 'Actividad 2',
 			imagenes: [
-				'infografias/UNIDAD_2/Semana_11/2.1 Registrar al inicio.png',
-				'infografias/UNIDAD_2/Semana_11/2.2 Registrar al final.png',
-				'infografias/UNIDAD_2/Semana_11/2.3 Insertar en posición X.png',
-				'infografias/UNIDAD_2/Semana_11/2.4 Insertar después de código.png',
-				'infografias/UNIDAD_2/Semana_11/2.5 Atender siguiente paciente.png',
-				'infografias/UNIDAD_2/Semana_11/2.6 Eliminar turno cancelado.png',
-				'infografias/UNIDAD_2/Semana_11/2.7 Eliminar primer turno.png',
-				'infografias/UNIDAD_2/Semana_11/2.8 Eliminar último turno.png',
-				'infografias/UNIDAD_2/Semana_11/2.9 Reprogramar paciente.png',
-				'infografias/UNIDAD_2/Semana_11/2.10 Buscar paciente por código.png',
-				'infografias/UNIDAD_2/Semana_11/2.11 Mostrar pacientes pendientes.png',
-				'infografias/UNIDAD_2/Semana_11/2.12 Consultar cantidad.png',
-				'infografias/UNIDAD_2/Semana_11/2.13 Mostrar próximo paciente.png',
-				'infografias/UNIDAD_2/Semana_11/2.14 Ordenar por número de turno.png',
-				'infografias/UNIDAD_2/Semana_11/2.15 Intercambiar posiciones.png',
-				'infografias/UNIDAD_2/Semana_11/2.16 Modificar datos del paciente.png'
+				'infografias/UNIDAD_3/Semana_11/2.1 Registrar al inicio.png',
+				'infografias/UNIDAD_3/Semana_11/2.2 Registrar al final.png',
+				'infografias/UNIDAD_3/Semana_11/2.3 Insertar en posición X.png',
+				'infografias/UNIDAD_3/Semana_11/2.4 Insertar después de código.png',
+				'infografias/UNIDAD_3/Semana_11/2.5 Atender siguiente paciente.png',
+				'infografias/UNIDAD_3/Semana_11/2.6 Eliminar turno cancelado.png',
+				'infografias/UNIDAD_3/Semana_11/2.7 Eliminar primer turno.png',
+				'infografias/UNIDAD_3/Semana_11/2.8 Eliminar último turno.png',
+				'infografias/UNIDAD_3/Semana_11/2.9 Reprogramar paciente.png',
+				'infografias/UNIDAD_3/Semana_11/2.10 Buscar paciente por código.png',
+				'infografias/UNIDAD_3/Semana_11/2.11 Mostrar pacientes pendientes.png',
+				'infografias/UNIDAD_3/Semana_11/2.12 Consultar cantidad.png',
+				'infografias/UNIDAD_3/Semana_11/2.13 Mostrar próximo paciente.png',
+				'infografias/UNIDAD_3/Semana_11/2.14 Ordenar por número de turno.png',
+				'infografias/UNIDAD_3/Semana_11/2.15 Intercambiar posiciones.png',
+				'infografias/UNIDAD_3/Semana_11/2.16 Modificar datos del paciente.png'
 			]
 		}
 	],
@@ -310,37 +333,37 @@ const infografiasPorSemana = {
 		{
 			titulo: 'Actividad 1',
 			imagenes: [
-				'infografias/UNIDAD_2/Semana_12/1.1 Registrar al inicio.png',
-				'infografias/UNIDAD_2/Semana_12/1.2 Registrar al final.png',
-				'infografias/UNIDAD_2/Semana_12/1.3 Registrar en una posición.png',
-				'infografias/UNIDAD_2/Semana_12/1.4 Registrar después de otro alumno.png',
-				'infografias/UNIDAD_2/Semana_12/1.5 Mostrar todos los alumnos.png',
-				'infografias/UNIDAD_2/Semana_12/1.6 Mostrar en orden inverso.png',
-				'infografias/UNIDAD_2/Semana_12/1.7 Buscar por código.png',
-				'infografias/UNIDAD_2/Semana_12/1.8 Buscar por posición.png',
-				'infografias/UNIDAD_2/Semana_12/1.9 Eliminar al inicio.png',
-				'infografias/UNIDAD_2/Semana_12/1.10 Eliminar al final.png',
-				'infografias/UNIDAD_2/Semana_12/1.11 Eliminar por posición.png',
-				'infografias/UNIDAD_2/Semana_12/1.12 Eliminar por código.png',
-				'infografias/UNIDAD_2/Semana_12/1.13 Ordenar por promedio.png',
-				'infografias/UNIDAD_2/Semana_12/1.14 Intercambiar alumnos.png',
-				'infografias/UNIDAD_2/Semana_12/1.15 Modificar información.png',
-				'infografias/UNIDAD_2/Semana_12/1.16 Consultar la cantidad.png'
+				'infografias/UNIDAD_3/Semana_12/1.1 Registrar al inicio.png',
+				'infografias/UNIDAD_3/Semana_12/1.2 Registrar al final.png',
+				'infografias/UNIDAD_3/Semana_12/1.3 Registrar en una posición.png',
+				'infografias/UNIDAD_3/Semana_12/1.4 Registrar después de otro alumno.png',
+				'infografias/UNIDAD_3/Semana_12/1.5 Mostrar todos los alumnos.png',
+				'infografias/UNIDAD_3/Semana_12/1.6 Mostrar en orden inverso.png',
+				'infografias/UNIDAD_3/Semana_12/1.7 Buscar por código.png',
+				'infografias/UNIDAD_3/Semana_12/1.8 Buscar por posición.png',
+				'infografias/UNIDAD_3/Semana_12/1.9 Eliminar al inicio.png',
+				'infografias/UNIDAD_3/Semana_12/1.10 Eliminar al final.png',
+				'infografias/UNIDAD_3/Semana_12/1.11 Eliminar por posición.png',
+				'infografias/UNIDAD_3/Semana_12/1.12 Eliminar por código.png',
+				'infografias/UNIDAD_3/Semana_12/1.13 Ordenar por promedio.png',
+				'infografias/UNIDAD_3/Semana_12/1.14 Intercambiar alumnos.png',
+				'infografias/UNIDAD_3/Semana_12/1.15 Modificar información.png',
+				'infografias/UNIDAD_3/Semana_12/1.16 Consultar la cantidad.png'
 			]
 		},
 		{
 			titulo: 'Actividad 2',
 			imagenes: [
-				'infografias/UNIDAD_2/Semana_12/2.1 Registrar cita al inicio o al final.png',
-				'infografias/UNIDAD_2/Semana_12/2.2 Insertar cita en una posición.png',
-				'infografias/UNIDAD_2/Semana_12/2.3 Buscar cita por código o DNI.png',
-				'infografias/UNIDAD_2/Semana_12/2.4 Modificar información de una cita.png',
-				'infografias/UNIDAD_2/Semana_12/2.5 Cancelar o eliminar una cita.png',
-				'infografias/UNIDAD_2/Semana_12/2.6 Mostrar citas de la primera a la última.png',
-				'infografias/UNIDAD_2/Semana_12/2.7 Mostrar citas en orden inverso.png',
-				'infografias/UNIDAD_2/Semana_12/2.8 Ordenar citas por fecha y hora.png',
-				'infografias/UNIDAD_2/Semana_12/2.9 Buscar citas de un médico.png',
-				'infografias/UNIDAD_2/Semana_12/2.10 Contabilizar las citas.png'
+				'infografias/UNIDAD_3/Semana_12/2.1 Registrar cita al inicio o al final.png',
+				'infografias/UNIDAD_3/Semana_12/2.2 Insertar cita en una posición.png',
+				'infografias/UNIDAD_3/Semana_12/2.3 Buscar cita por código o DNI.png',
+				'infografias/UNIDAD_3/Semana_12/2.4 Modificar información de una cita.png',
+				'infografias/UNIDAD_3/Semana_12/2.5 Cancelar o eliminar una cita.png',
+				'infografias/UNIDAD_3/Semana_12/2.6 Mostrar citas de la primera a la última.png',
+				'infografias/UNIDAD_3/Semana_12/2.7 Mostrar citas en orden inverso.png',
+				'infografias/UNIDAD_3/Semana_12/2.8 Ordenar citas por fecha y hora.png',
+				'infografias/UNIDAD_3/Semana_12/2.9 Buscar citas de un médico.png',
+				'infografias/UNIDAD_3/Semana_12/2.10 Contabilizar las citas.png'
 			]
 		}
 	]
@@ -466,7 +489,7 @@ selectoresSemanas.forEach((selectorSemanas) => {
 	const unidadNumero = Number(selectorSemanas.closest('.unidad-block').dataset.unit);
 	Object.keys(infografiasPorSemana).forEach((semana) => {
 		const numeroSemana = Number(semana.match(/\d+/)[0]);
-		const unidadSemana = numeroSemana <= 4 ? 1 : numeroSemana <= 8 ? 2 : numeroSemana === 9 ? 3 : 2;
+		const unidadSemana = Math.ceil(numeroSemana / 4);
 		if (unidadSemana !== unidadNumero) return;
 
 		const boton = document.createElement('button');
