@@ -366,6 +366,33 @@ const infografiasPorSemana = {
 				'infografias/UNIDAD_3/Semana_12/2.10 Contabilizar las citas.png'
 			]
 		}
+	],
+	semana_13: [
+		{
+			titulo: 'Actividad 1',
+			imagenes: [
+				'infografias/UNIDAD_4/Semana_13/1.1_insertarInicio.png',
+				'infografias/UNIDAD_4/Semana_13/1.2_insertarFinal.png',
+				'infografias/UNIDAD_4/Semana_13/1.3_insertarPosicion.png',
+				'infografias/UNIDAD_4/Semana_13/1.4_insertarDespuesDe.png',
+				'infografias/UNIDAD_4/Semana_13/1.5_recorrerAdelante.png',
+				'infografias/UNIDAD_4/Semana_13/1.6_recorrerAtras.png',
+				'infografias/UNIDAD_4/Semana_13/1.7_buscarPorCodigo.png',
+				'infografias/UNIDAD_4/Semana_13/1.8_buscarPosicion.png',
+				'infografias/UNIDAD_4/Semana_13/1.9_eliminarInicio.png',
+				'infografias/UNIDAD_4/Semana_13/1.10_eliminarFinal.png',
+				'infografias/UNIDAD_4/Semana_13/1.11_eliminarPosicion.png',
+				'infografias/UNIDAD_4/Semana_13/1.12_eliminarPorCodigo.png',
+				'infografias/UNIDAD_4/Semana_13/1.13_ordenarPorPromedio.png',
+				'infografias/UNIDAD_4/Semana_13/1.14_intercambiar.png',
+				'infografias/UNIDAD_4/Semana_13/1.15_modificarAlumno.png',
+				'infografias/UNIDAD_4/Semana_13/1.16_obtenerTamano.png',
+				'infografias/UNIDAD_4/Semana_13/1.17_estaVacia.png',
+				'infografias/UNIDAD_4/Semana_13/1.18_hallarPromedio.png',
+				'infografias/UNIDAD_4/Semana_13/1.19_alumnosAprobados.png',
+				'infografias/UNIDAD_4/Semana_13/1.20_alumnosDesaprobados.png'
+			]
+		}
 	]
 };
 
@@ -393,10 +420,6 @@ function obtenerNombre(ruta) {
 		.trim()
 		.toLocaleLowerCase('es');
 	return nombreLimpio ? nombreLimpio[0].toLocaleUpperCase('es') + nombreLimpio.slice(1) : 'Infografía';
-}
-
-function obtenerMiniatura(ruta) {
-	return ruta.replace(/^infografias\//, 'infografias/miniaturas/').replace(/\.[^.]+$/, '.webp');
 }
 
 function abrirImagen(indice) {
@@ -446,28 +469,20 @@ function mostrarSemana(semana, galeriaInfografias) {
 		actividad.imagenes.forEach((imagenData) => {
 			const ruta = typeof imagenData === 'string' ? imagenData : imagenData.src;
 			const nombre = (typeof imagenData === 'object' && imagenData.titulo) || obtenerNombre(imagenData);
-			const tarjeta = document.createElement('button');
-			const miniatura = document.createElement('img');
+			const fila = document.createElement('button');
+			const icono = document.createElement('img');
 			const titulo = document.createElement('span');
 
-			tarjeta.className = 'infografia-card';
-			tarjeta.type = 'button';
-			tarjeta.setAttribute('aria-label', `Ampliar ${nombre}`);
-			tarjeta.dataset.originalSrc = ruta;
-			miniatura.src = obtenerMiniatura(ruta);
-			miniatura.dataset.originalSrc = ruta;
-			miniatura.width = 400;
-			miniatura.height = 533;
-			miniatura.addEventListener('error', () => {
-				if (miniatura.src !== new URL(ruta, document.baseURI).href) {
-					miniatura.src = ruta;
-				}
-			}, { once: true });
-			miniatura.alt = '';
-			miniatura.loading = 'lazy';
+			fila.className = 'infografia-card';
+			fila.type = 'button';
+			fila.setAttribute('aria-label', `Ampliar ${nombre}`);
+			fila.dataset.originalSrc = ruta;
+			icono.src = 'img/ic_infografia.jpg';
+			icono.alt = '';
+			icono.setAttribute('aria-hidden', 'true');
 			titulo.textContent = nombre;
-			tarjeta.append(miniatura, titulo);
-			galeriaActividad.append(tarjeta);
+			fila.append(icono, titulo);
+			galeriaActividad.append(fila);
 		});
 
 		seccionActividad.append(encabezado, galeriaActividad);
@@ -524,8 +539,8 @@ galeriasInfografias.forEach((galeriaInfografias) => {
 		imagenesVisor = Array.from(galeriaInfografias.querySelectorAll('.infografia-card')).map((elemento) => ({
 			src: elemento.dataset.originalSrc,
 			titulo: elemento.querySelector('span').textContent,
-			width: elemento.querySelector('img').naturalWidth || 400,
-			height: elemento.querySelector('img').naturalHeight || 533
+			width: 400,
+			height: 533
 		}));
 		abrirImagen(imagenesVisor.findIndex((imagen) => imagen.src === tarjeta.dataset.originalSrc));
 		visorImagen.showModal();

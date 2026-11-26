@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #6C4AB6;
-  --support-color: #C6E03B;
-  --cover-fallback: #2B1B3D;
+  --primary-color: #2563EB;
+  --support-color: #7DD3FC;
+  --cover-fallback: #123B5D;
   --bg-body: #f4f6f8;
   --card-bg: #ffffff;
   --text-dark: #000000;
   --text-muted: #000000;
-  --border-line: #ded7ea;
+  --border-line: #D8EAF5;
 }
 
 * {
@@ -235,42 +235,48 @@ h2 {
 }
 
 .actividad-galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  align-items: start;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .infografia-card {
+  display: flex;
+  width: 100%;
   min-width: 0;
-  align-self: start;
-  padding: 8px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
   color: var(--text-dark);
-  background: #ffffff;
-  border: 1px solid var(--border-line);
-  border-radius: 6px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border-line);
+  border-radius: 4px;
   text-align: left;
   cursor: pointer;
 }
 
+.infografia-card:last-child {
+  border-bottom: 0;
+}
+
 .infografia-card:hover {
-  border-color: var(--primary-color);
+  background: var(--bg-body);
 }
 
 .infografia-card img {
   display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
-  background: var(--bg-body);
 }
 
 .infografia-card span {
   display: block;
-  margin-top: 6px;
+  min-width: 0;
   font-size: 0.9rem;
   overflow-wrap: anywhere;
+  line-height: 1.4;
 }
 
 .coming-soon {
